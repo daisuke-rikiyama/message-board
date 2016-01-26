@@ -11,7 +11,11 @@
         <% end %>
     </div>
 </div>
-    <%= form_for(Message.new, html: {class: "form-horizontal"}) do |f| %>
+
+<% #部分テンプレートを読み込んでいる %>
+<#= render 'form' %>
+
+<%= form_for(Message.new, html: {class: "form-horizontal"}) do |f| %>
     <% if @message.errors.present? %>
         <div class="alert alert-danger">
             <%= alert %>
@@ -51,7 +55,6 @@
             </div>
             <div class="col-sm-7"></div>
         </div>
-    <% end %>
-</div>
+<% end %>
 
 
